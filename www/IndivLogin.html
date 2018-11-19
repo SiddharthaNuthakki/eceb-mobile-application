@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <title>Log In here</title>
+        <!-- Required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!-- Path to Framework7 Library CSS-->
+        <link rel="stylesheet" href="css/framework7.material.min.css">
+        <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+        <!-- Path to your custom app styles-->
+        <link rel="stylesheet" href="css/my-app.css">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages navbar-fixed toolbar-fixed">
+                <div class="page" data-page = "indivlogin">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="navbar-inner">
+                                <div class="left">
+                                    <a href="LoginPage.html" class="link">
+                                        <i class="icon icon-back"></i>
+                                        <span>Back</span>
+                                    </a>
+                                </div>
+                                <div class="center">ECEB - Individual Login</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content" id="indivLoginSection">
+                        <div class="block">
+                            <div>
+                                Email<br><input type="text" id='user'  placeholder="email" value="admin"/><br>
+                                Password<br><input id='pass' type="password" placeholder="password" value="district"/><br><br>
+                                <a class="button button-fill" id="indiv-Submit">Log In</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

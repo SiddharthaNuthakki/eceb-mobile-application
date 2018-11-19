@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Eceb",
+  "short_name": "Eceb",
+  "version": "com.example.hello",
+  "description": "An awesome Ionic/Cordova app.",
+  "author": "IUPUI Team",
+  "icons": [],
+  "start_url": "index.html"
+}

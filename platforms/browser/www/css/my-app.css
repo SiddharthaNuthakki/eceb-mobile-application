@@ -1,0 +1,67 @@
+#loginButton{
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+}
+#signupButton{
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+#indlogButton{
+    width: 200px;
+    height: 35px;
+    margin: 0 auto;
+}
+#faclogButton{
+    width: 200px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+/*#user{*/
+    /*border: 1px solid black;*/
+    /*!*margin-top: 30px;*!*/
+    /*!*margin-bottom: 100px;*!*/
+    /*margin-right: 150px;*/
+    /*margin-left: 80px;*/
+    /*background-color: lightblue;*/
+/*}*/
+/*#pass{*/
+    /*border: 1px solid black;*/
+    /*!*margin-top: 31x;*!*/
+    /*!*margin-bottom: 100px;*!*/
+    /*margin-right: 150px;*/
+    /*margin-left: 80px;*/
+    /*background-color: lightblue;*/
+/*}*/
+
+.container {
+    width: 200px;
+    clear: both;
+}
+
+.container input {
+    width: 100%;
+    clear: both;
+}
+
+#indiv-Submit{
+    margin-top: 15px;
+    margin-left: 50px;
+    width: 100px;
+    height: 35px;
+}
+
+#CreateBabyButton{
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+#AddBabyButton{
+    width: 200px;
+    height: 35px;
+    margin: 0 auto;
+}

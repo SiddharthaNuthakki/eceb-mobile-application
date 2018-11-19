@@ -1,0 +1,116 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/nuthakki/Downloads/eceb-master/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml",
+            "map": [
+                {
+                    "source": "/Users/nuthakki/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/4470b4fa9839832054a19c69fc9b9734/res/values-bg/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "196",
+                        "endOffsets": "481"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "196",
+                        "endOffsets": "297"
+                    }
+                },
+                {
+                    "source": "/Users/nuthakki/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/59b6f1209eb0dff8a63f6e1d8c850109/res/values-bg/values-bg.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "406",
+                        "endColumns": "100",
+                        "endOffsets": "502"
+                    }
+                },
+                {
+                    "source": "/Users/nuthakki/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/b09175d6fef9ec57b075655349d563a7/res/values-bg/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "243",
+                        "endColumns": "99",
+                        "endOffsets": "342"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "302",
+                        "endColumns": "103",
+                        "endOffsets": "401"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "/Users/nuthakki/Desktop/eceb_framework7/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-bg/values-bg.xml",
+            "map": [
+                {
+                    "source": "/Users/nuthakki/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.6.2.aar/4470b4fa9839832054a19c69fc9b9734/res/values-bg/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "196",
+                        "endOffsets": "481"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "196",
+                        "endOffsets": "297"
+                    }
+                },
+                {
+                    "source": "/Users/nuthakki/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/59b6f1209eb0dff8a63f6e1d8c850109/res/values-bg/values-bg.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "406",
+                        "endColumns": "100",
+                        "endOffsets": "502"
+                    }
+                },
+                {
+                    "source": "/Users/nuthakki/.gradle/caches/transforms-1/files-1.1/firebase-messaging-11.6.2.aar/b09175d6fef9ec57b075655349d563a7/res/values-bg/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "243",
+                        "endColumns": "99",
+                        "endOffsets": "342"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "302",
+                        "endColumns": "103",
+                        "endOffsets": "401"
+                    }
+                }
+            ]
+        }
+    ]
+}

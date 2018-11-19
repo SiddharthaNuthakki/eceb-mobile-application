@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BabyPhase2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var list = JSON.parse(window.localStorage.getItem("babieslist"));
+            var item = window.localStorage.getItem("cookie");
+            $("#name").append('Baby of '+list[item].mother_name);
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            var x = setInterval(function() {
+                var list = JSON.parse(window.localStorage.getItem('babieslist'));
+                var item = window.localStorage.getItem("cookie");
+                var birthDate = list[item].timeinseconds;
+
+                // Get todays date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the birth date
+                var distance = now - birthDate;
+                // Time calculations for days, hours, minutes and seconds
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                var Time1 = hours + "h " + minutes + "m " + seconds + "s " + "Minutes after birth";
+                document.getElementById("write").innerHTML = Time1;
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+<div class="views">
+    <div class="view view-main">
+        <div class="pages navbar-fixed toolbar-fixed">
+            <div class="page" data-page = "babyphase2">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a onClick="backbabyphase1()" class="link">
+                                <i class="icon icon-back"></i>
+                                <span>Back</span>
+                            </a>
+                        </div>
+                        <div class="center" style="margin: 0 auto;">ECEB - BabyPhase2</div>
+                        <div class="right">
+                            <a href="#" class="link">Log off</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content">
+
+                    <!--Media List View-->
+
+                    <div class="content-block-title" align="center" style="font-size: large">60 to 90 Minutes after birth</div>
+                    <div class="list-block media-list">
+                        <ul>
+                            <!--Media List View-->
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title" id="name"> </div>
+                                            <div class="item-after" id="write"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!--Media List View-->
+                            <li>
+                                <a href="#" class="item-link item-content" >
+                                    <div class="item-inner">
+                                            <div class="item-title">Preventive care</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Single chekbox item -->
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="my-checkbox" id="Eyecare">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Eye Care</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <!-- Another chekbox item -->
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="my-checkbox" id="Cordcare">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Cord Care</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <!-- Another chekbox item -->
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="my-checkbox" id="VitaminK">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Vitamin K given</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <!--Media List View-->
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                            <div class="item-title">Assess</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <!-- Single chekbox item -->
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Examine</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="Examination/Assess" id="exam">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Temperature</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="Temperature" id="temperature">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Weight</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="Weight" id="weight">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a class="button button-fill" onClick="babyDetails1()" id="BabyPhase2Button" >Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="js/my-app.js"></script>
+<!--<script type="text/javascript" src="cordova.js"></script>-->
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+</body>
+</html>

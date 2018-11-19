@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AddBaby</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+</head>
+<body>
+<div class="views">
+    <div class="view view-main">
+        <div class="pages navbar-fixed toolbar-fixed">
+            <div class="page" data-page = "baby1">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="BabiesList.html" class="link">
+                                <i class="icon icon-back"></i>
+                                <span>Back</span>
+                            </a>
+                        </div>
+                        <div class="center" style="margin: 0 auto;">ECEB - Baby1</div>
+                        <div class="right">
+                            <a href="#" class="link">Log off</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-content">
+
+                    <!--Media List View-->
+
+                    <div class="content-block-title">Baby</div>
+                    <div class="list-block media-list">
+                        <ul>
+                            <li>
+                                <a href="BPhase1.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">Baby 1</div>
+                                            <div class="item-after" id="write">15:14</div>
+
+                                        </div>
+                                        <!--<div class="item-subtitle">New messages from John Doe</div>-->
+                                        <div class="item-text">Bed.No, Mother Name, Child.No & Time</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script type="text/javascript" src="js/my-app.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("Birth Date time").value;
+        document.getElementById("write").innerHTML = x;
+    }
+</script>
+</body>
+</html>

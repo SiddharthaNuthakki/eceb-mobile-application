@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>AddBaby</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!-- Path to Framework7 Library CSS-->
+        <link rel="stylesheet" href="css/framework7.material.min.css">
+        <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+        <!-- Path to your custom app styles-->
+        <link rel="stylesheet" href="css/my-app.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script
+                src="https://code.jquery.com/jquery-3.3.1.js"
+                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                var dtToday = new Date();
+
+                var month = dtToday.getMonth() + 1;
+                var day = dtToday.getDate();
+                var year = dtToday.getFullYear();
+                var minyear = year - 1;
+                var hours = dtToday.getHours();
+                var minutes = dtToday.getMinutes();
+                if(month < 10)
+                    month = '0' + month.toString();
+                if(day < 10)
+                    day = '0' + day.toString();
+
+                if(hours < 10)
+                    hours = '0' + hours.toString();
+                if(minutes < 10)
+                    minutes = '0' + minutes.toString();
+
+
+                var maxDate = year + '-' + month + '-' + day + 'T' + hours + ':' + minutes;
+                var minDate = minyear + '-' + month + '-' + day + 'T' + hours + ':' + minutes;
+                $('#birthDateTime').attr('min', minDate);
+                $('#birthDateTime').attr('max', maxDate);
+                babyTimer();
+            });
+        </script>
+    </head>
+    <body>
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages navbar-fixed toolbar-fixed">
+                <div class="page" data-page = "addbaby">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a onClick="backbabieslist()" class="link">
+                                    <i class="icon icon-back"></i>
+                                    <span>Back</span>
+                                </a>
+                            </div>
+                            <div class="center" style="margin: 0 auto;">ECEB - CreateBaby</div>
+                            <div class="right">
+                                <a href="#" class="link" onclick="logout()">Log off</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <form action="BabiesList.html" method="GET">
+                            <div class="content-block-title" style="background-color: lightgrey; color: green; font-size: 16px;">Baby Details</div>
+                            <div class="list-block">
+                                <ul>
+                                    <!-- Text inputs -->
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title label">Child No.</div>
+                                                <div class="item-input">
+                                                    <input type="text" placeholder="Child Number" id="childNo" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title label">Bed No.</div>
+                                                <div class="item-input">
+                                                    <input type="email" placeholder="Bed Number" id="bedNo" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Select -->
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title label">Gender</div>
+                                                <div class="item-input">
+                                                    <select id="Gender" required>
+                                                        <option value="0">Male</option>
+                                                        <option value="1">Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Text inputs -->
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title label">Mother Name</div>
+                                                <div class="item-input">
+                                                    <input type="text" placeholder="Mother Name" id="motherName" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- Date time-->
+                                    <li>
+                                        <div class="item-content" >
+                                            <div class="item-inner">
+                                                <div class="item-title label">Birth Date time</div>
+                                                <div class="item-input">
+                                                    <input type="datetime-local" placeholder="Birth day time" id="birthDateTime" value="" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div>
+                                    <a class="button button-fill" id="Createbaby-Button" onClick="addBaby()">Add Baby</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+
+    <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
